@@ -11,7 +11,7 @@
 * Compiled language.
   * Performance is almost nearer to lower level languages.
 * Neat and clean syntax
-  * No classes. Every thing is divided into packages only. Go has only structs instead of classes.
+  * No classes. Everything is divided into packages only. Go has only structs instead of classes.
   * Does not support inheritance.
   * No constructors.
   * No annotations.
