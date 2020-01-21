@@ -2,7 +2,7 @@
 
 ## For 
 
-**Go has only one looping construct**, the `for` loop.
+Go has only one looping construct, the `for` loop.
 
 ```go
 package main
