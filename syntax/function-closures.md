@@ -2,6 +2,10 @@
 
 Go functions may be closures. A closure is a function value that references variables from outside its body. The function may access and assign to the referenced variables; in this sense the function is "bound" to the variables.
 
+{% hint style="info" %}
+[A closure is a persistent scope which holds on to local variables even after the code execution has moved out of that block.](https://stackoverflow.com/questions/36636/what-is-a-closure)
+{% endhint %}
+
 For example, the `adder` function returns a closure. Each closure is bound to its own `sum` variable.
 
 ```go
