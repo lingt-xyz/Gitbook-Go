@@ -95,5 +95,8 @@ var (
 func main() {
 	fmt.Println(v1, p, v2, v3)
 }
+
+
+// {1 2} &{1 2} {1 0} {0 0}
 ```
 
