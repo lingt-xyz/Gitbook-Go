@@ -97,6 +97,14 @@ func main() {
 	fmt.Println(a, b)
 	fmt.Println(names)
 }
+
+
+/*
+[John Paul George Ringo]
+[John Paul] [Paul George]
+[John XXX] [XXX George]
+[John XXX George Ringo]
+*/
 ```
 
 ## Slice literals
@@ -140,6 +148,13 @@ func main() {
 	}
 	fmt.Println(s)
 }
+
+
+/*
+[2 3 5 7 11 13]
+[true false true true false true]
+[{2 true} {3 false} {5 true} {7 true} {11 false} {13 true}]
+*/
 ```
 
 ## Slice defaults
