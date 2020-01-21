@@ -111,6 +111,6 @@ BOOM!
 ```
 
 {% hint style="warning" %}
-Why always 'BOOM' was chosen?
+Why always 'BOOM!' was chosen?
 {% endhint %}
 
