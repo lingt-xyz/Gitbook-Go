@@ -28,4 +28,5 @@
 * [Structs](syntax/structs.md)
 * [Arrays](syntax/arrays.md)
 * [Maps](syntax/maps.md)
+* [Function values](syntax/function-values.md)
 
