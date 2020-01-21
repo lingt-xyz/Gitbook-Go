@@ -110,3 +110,7 @@ BOOM!
 */
 ```
 
+{% hint style="warning" %}
+Why always 'BOOM' was chosen?
+{% endhint %}
+
