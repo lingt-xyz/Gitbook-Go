@@ -347,3 +347,39 @@ The declaration in a type switch has the same syntax as a type assertion `i.(T)`
 
 This switch statement tests whether the interface value `i` holds a value of type `T` or `S`. In each of the `T` and `S` cases, the variable `v` will be of type `T` or `S` respectively and hold the value held by `i`. In the default case \(where there is no match\), the variable `v` is of the same interface type and value as `i`.
 
+## Stringers
+
+One of the most ubiquitous interfaces is [`Stringer`](https://golang.org/pkg/fmt/#Stringer) defined by the [`fmt`](https://golang.org/pkg/fmt/) package.
+
+```text
+type Stringer interface {
+    String() string
+}
+```
+
+A `Stringer` is a type that can describe itself as a string. The `fmt` package \(and many others\) look for this interface to print values.
+
+```go
+package main
+
+import "fmt"
+
+type Person struct {
+	Name string
+	Age  int
+}
+
+func (p Person) String() string {
+	return fmt.Sprintf("%v (%v years)", p.Name, p.Age)
+}
+
+func main() {
+	a := Person{"Arthur Dent", 42}
+	z := Person{"Zaphod Beeblebrox", 9001}
+	fmt.Println(a, z)
+}
+
+
+// Arthur Dent (42 years) Zaphod Beeblebrox (9001 years)
+```
+
