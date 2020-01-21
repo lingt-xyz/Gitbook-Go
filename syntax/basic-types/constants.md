@@ -4,9 +4,7 @@ Constants are declared like variables, but with the `const`keyword.
 
 Constants can be character, string, boolean, or numeric values.
 
-{% hint style="warning" %}
-Constants **cannot** be declared using the `:=` syntax.
-{% endhint %}
+Constants cannot be declared using the `:=` syntax.
 
 ```go
 package main
