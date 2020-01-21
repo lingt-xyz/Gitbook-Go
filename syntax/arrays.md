@@ -207,7 +207,7 @@ The capacity of a slice is the number of elements in the underlying array, count
 
 The length and capacity of a slice `s` can be obtained using the expressions `len(s)` and `cap(s)`.
 
-You can extend a slice's length by re-slicing it, provided it has sufficient capacity. Try changing one of the slice operations in the example program to extend it beyond its capacity and see what happens.
+You can extend a slice's length by re-slicing it, provided it has sufficient capacity. 
 
 ```go
 package main
@@ -234,6 +234,13 @@ func main() {
 func printSlice(s []int) {
 	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
 }
+
+/*
+len=6 cap=6 [2 3 5 7 11 13]
+len=0 cap=6 []
+len=4 cap=6 [2 3 5 7]
+len=2 cap=4 [5 7]
+*/
 ```
 
 ## Nil slices
