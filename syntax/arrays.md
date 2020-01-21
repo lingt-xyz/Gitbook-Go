@@ -203,7 +203,9 @@ A slice has both a length and a capacity.
 
 The length of a slice is the number of elements it contains.
 
-The capacity of a slice is the number of elements in the underlying array, counting from the first element in the slice.
+{% hint style="warning" %}
+The capacity of a slice is the number of elements in the underlying array, counting from the **first element in the slice**.
+{% endhint %}
 
 The length and capacity of a slice `s` can be obtained using the expressions `len(s)` and `cap(s)`.
 
@@ -309,6 +311,13 @@ func printSlice(s string, x []int) {
 	fmt.Printf("%s len=%d cap=%d %v\n",
 		s, len(x), cap(x), x)
 }
+
+/*
+a len=5 cap=5 [0 0 0 0 0]
+b len=0 cap=5 []
+c len=2 cap=5 [0 0]
+d len=3 cap=3 [0 0 0]
+*/
 ```
 
 ## Slices of slices
