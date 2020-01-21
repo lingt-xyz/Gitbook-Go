@@ -5,14 +5,14 @@ Go has pointers. A pointer holds the memory address of a value.
 The type `*T` is a pointer to a `T` value. Its zero value is `nil`.
 
 ```go
-var p *int
+var p *int    // p is a pointer of type int
 ```
 
 The `&` operator generates a pointer to its operand.
 
 ```go
 i := 42
-p = &i
+p = &i    // p now point to the address of i
 ```
 
 The `*` operator denotes the pointer's underlying value.
