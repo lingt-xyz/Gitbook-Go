@@ -29,4 +29,5 @@
 * [Arrays](syntax/arrays.md)
 * [Maps](syntax/maps.md)
 * [Function values](syntax/function-values.md)
+* [Function closures](syntax/function-closures.md)
 
