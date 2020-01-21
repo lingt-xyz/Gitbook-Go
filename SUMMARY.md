@@ -31,3 +31,7 @@
 * [Function values](syntax/function-values.md)
 * [Function closures](syntax/function-closures.md)
 
+## Methods and Interfaces
+
+* [Methods](methods-and-interfaces/methods.md)
+
