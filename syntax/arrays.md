@@ -69,7 +69,7 @@ func main() {
 Slices are like references to arrays
 {% endhint %}
 
-A slice does not store any data, it just describes a section of an underlying array.
+A slice **does not store** any data, it just describes a section of an underlying array.
 
 Changing the elements of a slice modifies the corresponding elements of its underlying array.
 
