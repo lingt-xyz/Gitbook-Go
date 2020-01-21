@@ -102,7 +102,7 @@ Methods with pointer receivers can modify the value to which the receiver points
 
 Try removing the `*` from the declaration of the `Scale` function on line 16 and observe how the program's behavior changes.
 
-With a value receiver, the `Scale` method operates on a copy of the original `Vertex` value. \(This is the same behavior as for any other function argument.\) The `Scale` method must have a pointer receiver to change the `Vertex` value declared in the `main` function.
+With a value receiver, the `Scale` method operates on **a copy of the original `Vertex` value**. \(This is the same behavior as for any other function argument.\) The `Scale` method must have a pointer receiver to change the `Vertex` value declared in the `main` function.
 
 ```go
 package main
