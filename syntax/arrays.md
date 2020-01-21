@@ -351,6 +351,12 @@ func main() {
 		fmt.Printf("%s\n", strings.Join(board[i], " "))
 	}
 }
+
+/*
+X _ X
+O _ X
+_ _ O
+*/
 ```
 
 
