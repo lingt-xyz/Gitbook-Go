@@ -34,5 +34,15 @@
 ## Methods and Interfaces
 
 * [Methods](methods-and-interfaces/methods.md)
-* [Interfaces](methods-and-interfaces/interfaces.md)
+* [Interfaces](methods-and-interfaces/interfaces/README.md)
+  * [Stringers](methods-and-interfaces/interfaces/stringers.md)
+  * [Errors](methods-and-interfaces/interfaces/errors.md)
+  * [Readers](methods-and-interfaces/interfaces/readers.md)
+  * [Images](methods-and-interfaces/interfaces/images.md)
+
+## Concurrency
+
+* [Goroutines](concurrency/goroutines.md)
+* [Channels](concurrency/channels.md)
+* [Select](concurrency/select.md)
 
