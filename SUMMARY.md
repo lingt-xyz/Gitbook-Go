@@ -34,4 +34,5 @@
 ## Methods and Interfaces
 
 * [Methods](methods-and-interfaces/methods.md)
+* [Interfaces](methods-and-interfaces/interfaces.md)
 
