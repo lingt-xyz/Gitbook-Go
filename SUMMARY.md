@@ -26,5 +26,6 @@
 * [Defer](syntax/defer.md)
 * [Pointers](syntax/pointers.md)
 * [Structs](syntax/structs.md)
-* [Arrays](syntax/arrays.md)
+* [Arrays](syntax/arrays/README.md)
+  * [Range](syntax/arrays/range.md)
 

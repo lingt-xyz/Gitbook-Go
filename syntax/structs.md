@@ -15,6 +15,9 @@ type Vertex struct {
 func main() {
 	fmt.Println(Vertex{1, 2})
 }
+
+
+// {1 2}
 ```
 
 ### Struct Fields
@@ -36,6 +39,9 @@ func main() {
 	v.X = 4
 	fmt.Println(v.X)
 }
+
+
+// 4
 ```
 
 ### Pointers to structs
@@ -89,5 +95,8 @@ var (
 func main() {
 	fmt.Println(v1, p, v2, v3)
 }
+
+
+// {1 2} &{1 2} {1 0} {0 0}
 ```
 
