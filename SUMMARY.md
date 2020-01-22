@@ -45,4 +45,5 @@
 * [Goroutines](concurrency/goroutines.md)
 * [Channels](concurrency/channels.md)
 * [Select](concurrency/select.md)
+* [sync.Mutex](concurrency/sync.mutex.md)
 
