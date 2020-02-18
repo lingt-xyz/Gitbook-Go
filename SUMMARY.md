@@ -14,6 +14,7 @@
   * [Type conversions](syntax/basic-types/type-conversions.md)
   * [Type inference](syntax/basic-types/type-inference.md)
   * [Constants](syntax/basic-types/constants.md)
+  * [iota](syntax/basic-types/iota.md)
   * [Numeric Constants](syntax/basic-types/numeric-constants.md)
   * [Playground](syntax/basic-types/playground.md)
 * [Variables](syntax/variables/README.md)
