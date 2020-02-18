@@ -1,5 +1,7 @@
 # Playground
 
+## Initialization
+
 ```go
 package main
 
@@ -9,17 +11,21 @@ import (
 
 
 func main() {
-	ints1 := [3]int{1,2,3}
+	ints1 := [3]int{1,2,3} // this is an array
 	fmt.Printf("%v\n", ints1)
 	
-	ints2 := [...]int{1,2,3}
+	ints2 := [...]int{1,2,3} // this is an array
 	fmt.Printf("%v\n", ints2)
 	
-	var ints3 [3]int
+	ints3 := []int{1,2,3} // this is a slice
 	fmt.Printf("%v\n", ints3)
+	
+	var ints4 [3]int
+	fmt.Printf("%v\n", ints4)
 }
 
 // Expected results:
+[1 2 3]
 [1 2 3]
 [1 2 3]
 [0 0 0]
@@ -39,5 +45,38 @@ func main() {
 }
 
 // [[1 0] [0 1]]
+```
+
+## Copy
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+
+func main() {
+	a := [3]int{1,2,3}
+	fmt.Printf("%v\n", a)
+	
+	b := a
+	b[0] = 0
+	fmt.Printf("%v\n", a)
+	fmt.Printf("%v\n", b)
+	
+	c := &a
+	c[0] = 0
+	fmt.Printf("%v\n", a)
+	fmt.Printf("%v\n", c)
+}
+
+//
+[1 2 3]
+[1 2 3]
+[0 2 3]
+[0 2 3]
+&[0 2 3]
 ```
 
