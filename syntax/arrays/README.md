@@ -1,5 +1,11 @@
 # Arrays
 
+{% hint style="warning" %}
+Arrays are value types.
+
+Slices are reference types. 
+{% endhint %}
+
 The type `[n]T` is an array of `n` values of type `T`.
 
 The expression
@@ -60,13 +66,16 @@ func main() {
 	var s []int = primes[1:4]
 	fmt.Println(s)
 }
+
+
+// [3 5 7]
 ```
 
 {% hint style="info" %}
 Slices are like references to arrays
 {% endhint %}
 
-A slice does not store any data, it just describes a section of an underlying array.
+A slice **does not store** any data, it just describes a section of an underlying array.
 
 Changing the elements of a slice modifies the corresponding elements of its underlying array.
 
@@ -94,6 +103,14 @@ func main() {
 	fmt.Println(a, b)
 	fmt.Println(names)
 }
+
+
+/*
+[John Paul George Ringo]
+[John Paul] [Paul George]
+[John XXX] [XXX George]
+[John XXX George Ringo]
+*/
 ```
 
 ## Slice literals
@@ -137,6 +154,13 @@ func main() {
 	}
 	fmt.Println(s)
 }
+
+
+/*
+[2 3 5 7 11 13]
+[true false true true false true]
+[{2 true} {3 false} {5 true} {7 true} {11 false} {13 true}]
+*/
 ```
 
 ## Slice defaults
@@ -177,6 +201,11 @@ func main() {
 	s = s[1:]
 	fmt.Println(s)
 }
+
+//
+[3 5 7]
+[3 5]
+[5]
 ```
 
 ## Slice length and capacity
@@ -185,11 +214,13 @@ A slice has both a length and a capacity.
 
 The length of a slice is the number of elements it contains.
 
-The capacity of a slice is the number of elements in the underlying array, counting from the first element in the slice.
+{% hint style="warning" %}
+The capacity of a slice is the number of elements in the underlying array, counting from the **first element in the slice**.
+{% endhint %}
 
 The length and capacity of a slice `s` can be obtained using the expressions `len(s)` and `cap(s)`.
 
-You can extend a slice's length by re-slicing it, provided it has sufficient capacity. Try changing one of the slice operations in the example program to extend it beyond its capacity and see what happens.
+You can extend a slice's length by re-slicing it, provided it has sufficient capacity. 
 
 ```go
 package main
@@ -216,6 +247,13 @@ func main() {
 func printSlice(s []int) {
 	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
 }
+
+/*
+len=6 cap=6 [2 3 5 7 11 13]
+len=0 cap=6 []
+len=4 cap=6 [2 3 5 7]
+len=2 cap=4 [5 7]
+*/
 ```
 
 ## Nil slices
@@ -284,6 +322,13 @@ func printSlice(s string, x []int) {
 	fmt.Printf("%s len=%d cap=%d %v\n",
 		s, len(x), cap(x), x)
 }
+
+/*
+a len=5 cap=5 [0 0 0 0 0]
+b len=0 cap=5 []
+c len=2 cap=5 [0 0]
+d len=3 cap=3 [0 0 0]
+*/
 ```
 
 ## Slices of slices
@@ -317,7 +362,138 @@ func main() {
 		fmt.Printf("%s\n", strings.Join(board[i], " "))
 	}
 }
+
+/*
+X _ X
+O _ X
+_ _ O
+*/
 ```
 
+## Appending to a slice
 
+Go provides a built-in `append` function. The [documentation](https://golang.org/pkg/builtin/#append) of the built-in package describes `append`.
+
+```text
+func append(s []T, vs ...T) []T
+```
+
+The first parameter `s` of `append` is a slice of type `T`, and the rest are `T` values to append to the slice.
+
+The resulting value of `append` is a slice containing all the elements of the original slice plus the provided values.
+
+{% hint style="warning" %}
+If the backing array of `s` is too small to fit all the given values a bigger array will be allocated. The returned slice will point to the newly allocated array.
+{% endhint %}
+
+\(To learn more about slices, read the [Slices: usage and internals](https://blog.golang.org/go-slices-usage-and-internals) article.\)
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var s []int
+	printSlice(s)
+
+	// append works on nil slices.
+	s = append(s, 0)	// 
+	// the capacity now is 2 instead of 1 
+	// because a new array has been created and the size is doubled
+	printSlice(s)
+
+	// The slice grows as needed.
+	s = append(s, 1)
+	printSlice(s)
+
+	// We can add more than one element at a time.
+	s = append(s, 2, 3, 4)
+	printSlice(s)
+}
+
+func printSlice(s []int) {
+	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
+}
+
+/*
+len=0 cap=0 []
+len=1 cap=2 [0]
+len=2 cap=2 [0 1]
+len=5 cap=8 [0 1 2 3 4]
+*/
+```
+
+## Range
+
+The `range` form of the `for` loop iterates over a slice or map.
+
+When ranging over a slice, two values are returned for each iteration. The first is the index, and the second is a **copy of the element** at that index.
+
+```go
+package main
+
+import "fmt"
+
+var pow = []int{1, 2, 4, 8, 16, 32, 64, 128}
+
+func main() {
+	for i, v := range pow {
+		fmt.Printf("2**%d = %d\n", i, v)
+	}
+}
+
+/*
+2**0 = 1
+2**1 = 2
+2**2 = 4
+2**3 = 8
+2**4 = 16
+2**5 = 32
+2**6 = 64
+2**7 = 128
+*/
+```
+
+You can skip the index or value by assigning to `_`.
+
+```text
+for i, _ := range pow
+for _, value := range pow
+```
+
+If you only want the index, you can omit the second variable.
+
+```text
+for i := range pow
+```
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	pow := make([]int, 10)
+	for i := range pow {
+		pow[i] = 1 << uint(i) // == 2**i
+	}
+	for _, value := range pow {
+		fmt.Printf("%d\n", value)
+	}
+}
+
+/*
+1
+2
+4
+8
+16
+32
+64
+128
+256
+512
+*/
+```
 

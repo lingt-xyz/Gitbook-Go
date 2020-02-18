@@ -28,7 +28,7 @@
 * [Defer](syntax/defer.md)
 * [Pointers](syntax/pointers.md)
 * [Structs](syntax/structs.md)
-* [Arrays](syntax/arrays.md)
+* [Arrays](syntax/arrays/README.md)
   * [Playground](syntax/arrays/playground.md)
 * [Maps](syntax/maps.md)
 * [Function values](syntax/function-values.md)

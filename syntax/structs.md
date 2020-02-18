@@ -1,5 +1,9 @@
 # Structs
 
+{% hint style="warning" %}
+Structs are value types.
+{% endhint %}
+
  A `struct` is a collection of fields.
 
 ```go
@@ -15,6 +19,9 @@ type Vertex struct {
 func main() {
 	fmt.Println(Vertex{1, 2})
 }
+
+
+// {1 2}
 ```
 
 ### Struct Fields
@@ -36,13 +43,18 @@ func main() {
 	v.X = 4
 	fmt.Println(v.X)
 }
+
+
+// 4
 ```
 
 ### Pointers to structs
 
 Struct fields can be accessed through a struct pointer.
 
-To access the field `X` of a struct when we have the struct pointer `p` we could write `(*p).X`. However, that notation is cumbersome, so the language permits us instead to write just `p.X`, without the explicit dereference.
+{% hint style="info" %}
+To access the field `X` of a struct when we have the struct pointer `p` we could write `(*p).X`. However, that notation is cumbersome, so the language permits us instead to write just `p.X`, **without the explicit dereference**.
+{% endhint %}
 
 ```go
 package main
@@ -89,5 +101,8 @@ var (
 func main() {
 	fmt.Println(v1, p, v2, v3)
 }
+
+
+// {1 2} &{1 2} {1 0} {0 0}
 ```
 
