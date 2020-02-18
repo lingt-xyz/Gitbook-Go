@@ -80,3 +80,34 @@ func main() {
 &[0 2 3]
 ```
 
+## Append
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+
+func main() {
+	a := []int{1,2,3}
+	fmt.Printf("%v\n", a)
+	
+	a = append(a, 4)
+	fmt.Printf("%v\n", a)
+	
+	a = append(a, 5, 6)
+	fmt.Printf("%v\n", a)
+	
+	a = append(a, []int{7, 9}...) // ... is spread out operator
+	fmt.Printf("%v\n", a)
+}
+
+//
+[1 2 3]
+[1 2 3 4]
+[1 2 3 4 5 6]
+[1 2 3 4 5 6 7 9]
+```
+
