@@ -1,5 +1,7 @@
 # iota
 
+## Counter
+
 ```go
 package main
 
@@ -39,6 +41,8 @@ func main() {
 2
 ```
 
+## Simplified Counter
+
 ```go
 package main
 
@@ -65,7 +69,7 @@ func main() {
 2
 ```
 
-
+## Counter from 1
 
 ```go
 package main
@@ -94,7 +98,7 @@ func main() {
 3
 ```
 
-
+## Counter from an offset
 
 ```go
 package main
@@ -121,5 +125,58 @@ func main() {
 11
 12
 13
+```
+
+## Application
+
+### File Size
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+const (
+	_ = iota
+	KB = 1 << (10 * iota)
+	MB
+	GB
+	TB
+
+)
+
+func main() {
+	fileSize := 2000000000.
+	fmt.Printf("%.2fGB", fileSize/GB)
+}
+
+// 1.86GB
+```
+
+### Permission
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+const (
+	X = 1 << iota
+	W
+	R
+
+)
+
+func main() {
+	var permission byte = X | W | R
+	fmt.Printf("%b\n", permission)
+}
+
+
+// 111
 ```
 
