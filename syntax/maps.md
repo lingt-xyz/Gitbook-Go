@@ -1,9 +1,5 @@
 # Maps
 
-{% hint style="warning" %}
-Maps are reference types
-{% endhint %}
-
 A map maps keys to values.
 
 The zero value of a map is `nil`. A `nil` map has no keys, nor can keys be added.

@@ -24,7 +24,7 @@ func main() {
 // {1 2}
 ```
 
-### Struct Fields
+## Struct Fields
 
 Struct fields are accessed using a dot.
 
@@ -74,7 +74,7 @@ func main() {
 }
 ```
 
-### Struct Literals
+## Struct Literals
 
 A struct literal denotes a newly allocated struct value by listing the values of its fields.
 
@@ -104,5 +104,27 @@ func main() {
 
 
 // {1 2} &{1 2} {1 0} {0 0}
+```
+
+## Tags
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+
+type Student struct {
+	Name string `label:"full name"`
+}
+
+func main() {
+	s := Student{"MyFullName"}
+	fmt.Println(s)
+}
+
+// {MyFullName}
 ```
 
