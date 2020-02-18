@@ -111,3 +111,28 @@ func main() {
 [1 2 3 4 5 6 7 9]
 ```
 
+## Caution
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+
+func main() {
+	a := []int{1, 2, 3333, 4, 5}
+	fmt.Printf("%v\n", a)
+	
+	b := append(a[:2], a[3:]...)
+	fmt.Printf("%v\n", b)
+	fmt.Printf("%v\n", a)
+}
+
+//
+[1 2 3333 4 5]
+[1 2 4 5]
+[1 2 4 5 5]
+```
+
