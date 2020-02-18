@@ -15,6 +15,7 @@
   * [Type inference](syntax/basic-types/type-inference.md)
   * [Constants](syntax/basic-types/constants.md)
   * [Numeric Constants](syntax/basic-types/numeric-constants.md)
+  * [Playground](syntax/basic-types/playground.md)
 * [Variables](syntax/variables/README.md)
   * [Variables with initializers](syntax/variables/variables-with-initializers.md)
   * [Short variable declarations](syntax/variables/short-variable-declarations.md)
