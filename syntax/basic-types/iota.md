@@ -174,9 +174,12 @@ const (
 func main() {
 	var permission byte = X | W | R
 	fmt.Printf("%b\n", permission)
+	fmt.Printf("Is readable? %v", R & permission == R)
 }
 
 
-// 111
+// Expected results:
+111
+Is readable? true
 ```
 
