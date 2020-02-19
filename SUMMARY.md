@@ -38,6 +38,7 @@
 
 * [Methods](methods-and-interfaces/methods.md)
 * [Interfaces](methods-and-interfaces/interfaces/README.md)
+  * [Practices](methods-and-interfaces/interfaces/practices.md)
   * [Stringers](methods-and-interfaces/interfaces/stringers.md)
   * [Errors](methods-and-interfaces/interfaces/errors.md)
   * [Readers](methods-and-interfaces/interfaces/readers.md)
