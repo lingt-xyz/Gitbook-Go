@@ -28,15 +28,17 @@
 * [Defer](syntax/defer.md)
 * [Pointers](syntax/pointers.md)
 * [Structs](syntax/structs.md)
-* [Arrays](syntax/arrays.md)
+* [Arrays](syntax/arrays/README.md)
   * [Playground](syntax/arrays/playground.md)
 * [Maps](syntax/maps.md)
 * [Function values](syntax/function-values.md)
 * [Function closures](syntax/function-closures.md)
+* [new or make](syntax/new-or-make.md)
 
 ## Methods and Interfaces
 
 * [Methods](methods-and-interfaces/methods.md)
+* [init](methods-and-interfaces/init.md)
 * [Interfaces](methods-and-interfaces/interfaces/README.md)
   * [Practices](methods-and-interfaces/interfaces/practices.md)
   * [Stringers](methods-and-interfaces/interfaces/stringers.md)

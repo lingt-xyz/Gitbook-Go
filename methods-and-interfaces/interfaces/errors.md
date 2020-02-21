@@ -68,11 +68,11 @@ type ErrNegativeSqrt float64
 func (e ErrNegativeSqrt) Error() string {
 	return fmt.Sprintf("cannot Sqrt negative number: %v", float64(e))
 	// infinite loop if:
-	//return fmt.Sprintf("cannot Sqrt negative number: %v", float64(e))
+	//return fmt.Sprintf("cannot Sqrt negative number: %v", e)
 }
 ```
 
-Because the implementation of fmt package, `error` type was checked before `Stringer`.
+Because the implementation of `fmt` package, `error` type was checked before `Stringer`.
 
 {% embed url="https://github.com/golang/go/blob/2ed57a8cd86cec36b8370fb16d450e5a29a9375f/src/pkg/fmt/print.go\#L639" %}
 
