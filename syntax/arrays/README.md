@@ -431,10 +431,10 @@ The `range` form of the `for` loop iterates over a slice or map.
 When ranging over a slice, two values are returned for each iteration. The first is the index, and the second is a **copy of the element** at that index.
 
 {% hint style="danger" %}
-The second is a **copy of the element** at that index:
+The second is a **copy of the element** at that index, so
 
 1. Use `index` to update the element.
-2. Or use points in the array to update the element
+2. Or use pointers to update the element
 {% endhint %}
 
 ```go
