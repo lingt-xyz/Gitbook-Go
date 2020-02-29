@@ -1,5 +1,9 @@
 # iota
 
+Go's `iota` identifier is used in `const` declarations to simplify definitions of incrementing numbers.
+
+{% embed url="https://github.com/golang/go/wiki/Iota" %}
+
 ## Counter
 
 ```go
