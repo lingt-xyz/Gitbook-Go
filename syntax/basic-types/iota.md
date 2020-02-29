@@ -13,14 +13,12 @@ const (
 	a = iota
 	b = iota
 	c = iota
-
 )
 
 const (
 	r = iota
 	s = iota
 	t = iota
-
 )
 
 func main() {
@@ -54,7 +52,6 @@ const (
 	a = iota
 	b
 	c
-
 )
 
 func main() {
@@ -83,7 +80,6 @@ const (
 	a
 	b
 	c
-
 )
 
 func main() {
@@ -112,7 +108,6 @@ const (
 	a
 	b
 	c
-
 )
 
 func main() {
@@ -144,7 +139,6 @@ const (
 	MB
 	GB
 	TB
-
 )
 
 func main() {
@@ -168,7 +162,6 @@ const (
 	X = 1 << iota
 	W
 	R
-
 )
 
 func main() {
